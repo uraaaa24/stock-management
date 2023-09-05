@@ -1,9 +1,14 @@
+import { Typography } from "@mui/material";
 import { NextPage } from "next";
 
 type HeaderProps = {}
 
 const Header: NextPage<HeaderProps> = () => {
-    return <>Header</>
+    return (
+        <>
+            <Typography>username:</Typography>
+        </>
+    )
 }
 
 export default Header
