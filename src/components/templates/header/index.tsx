@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { NextPage } from "next";
 
 type HeaderProps = {}
@@ -6,7 +6,8 @@ type HeaderProps = {}
 const Header: NextPage<HeaderProps> = () => {
     return (
         <>
-            <Typography>username:</Typography>
+            <Typography>username: 山田太郎さん</Typography>
+            <Button variant="outlined">Sign Out</Button>
         </>
     )
 }
