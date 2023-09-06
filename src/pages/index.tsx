@@ -1,8 +1,10 @@
+import { getDefaultLayout } from "@/components/templates/layout"
 import { Button } from "@mui/material"
 import Head from 'next/head'
 import Link from 'next/link'
+import { NextPageWithLayout } from "./_app"
 
-export default function Home() {
+const Home: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -20,3 +22,7 @@ export default function Home() {
     </>
   )
 }
+
+Home.getLayout = getDefaultLayout
+
+export default Home

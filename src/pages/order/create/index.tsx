@@ -1,3 +1,4 @@
+import ProductNameForm from "@/components/organisms/productForms/productNameForm"
 import { Grid, Paper, Typography } from "@mui/material"
 import { FormProvider, useForm } from "react-hook-form"
 
@@ -11,6 +12,11 @@ const Create = () => {
                     <Grid item xs={12}>
                         <Typography variant="h4">新規発注登録</Typography>
                     </Grid>
+
+                    <Grid item xs={12}>
+                        <ProductNameForm name="productName" />
+                    </Grid>
+
                 </Grid>
             </Paper>
         </FormProvider>
