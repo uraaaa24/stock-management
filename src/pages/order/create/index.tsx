@@ -1,6 +1,10 @@
+import { FormProvider, useForm } from "react-hook-form"
+
 const Create = () => {
+    const methods = useForm()
+
     return (
-        <div>create</div>
+        <FormProvider {...methods}>create</FormProvider>
     )
 }
 
