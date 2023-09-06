@@ -1,8 +1,10 @@
 import ProductNameForm from "@/components/organisms/productForms/productNameForm"
+import { getDefaultLayout } from "@/components/templates/layout"
+import { NextPageWithLayout } from "@/pages/_app"
 import { Grid, Paper, Typography } from "@mui/material"
 import { FormProvider, useForm } from "react-hook-form"
 
-const Create = () => {
+const Create: NextPageWithLayout = () => {
     const methods = useForm()
 
     return (
@@ -22,5 +24,7 @@ const Create = () => {
         </FormProvider>
     )
 }
+
+Create.getLayout = getDefaultLayout
 
 export default Create
