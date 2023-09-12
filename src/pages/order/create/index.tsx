@@ -1,3 +1,4 @@
+import ColorForm from '@/components/organisms/productForms/colorForm'
 import ProductNameForm from '@/components/organisms/productForms/productNameForm'
 import SelectProductKindForm from '@/components/organisms/productForms/selectProductKindForm'
 import StockForm from '@/components/organisms/productForms/stockForm'
@@ -37,6 +38,10 @@ const Create: NextPageWithLayout = () => {
 
                     <Grid item xs={5}>
                         <StockForm name="stock" />
+                    </Grid>
+
+                    <Grid item xs={5}>
+                        <ColorForm name="color" />
                     </Grid>
 
                     <Grid item xs={12}>

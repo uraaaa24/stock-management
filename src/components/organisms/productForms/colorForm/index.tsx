@@ -1,12 +1,12 @@
 import { FormControl, FormHelperText, InputLabel, MenuItem, Select, Typography } from '@mui/material'
 import { Controller, useFormContext } from 'react-hook-form'
-import { DUMMY_KINDS } from '../../../../../dummyData/kinds'
+import { DUMMY_COLORS } from '../../../../../dummyData/color'
 
-type SelectProductKindFormProps = {
+type ColorFormProps = {
     name?: string
 }
 
-const SelectProductKindForm = ({ name = 'productKind' }: SelectProductKindFormProps) => {
+const ColorForm = ({ name = 'color' }: ColorFormProps) => {
     const { control } = useFormContext()
 
     return (
@@ -14,15 +14,14 @@ const SelectProductKindForm = ({ name = 'productKind' }: SelectProductKindFormPr
             <Controller
                 name={name}
                 control={control}
-                rules={{ required: '選択してください' }}
+                rules={{ required: '色を選択してください' }}
                 defaultValue=""
                 render={({ field, fieldState }) => {
                     return (
                         <>
                             <InputLabel>
-                                <Typography variant="h5">種類</Typography>
+                                <Typography variant="h5">色</Typography>
                             </InputLabel>
-
                             <FormControl fullWidth error={fieldState.invalid}>
                                 <Select
                                     {...field}
@@ -31,14 +30,13 @@ const SelectProductKindForm = ({ name = 'productKind' }: SelectProductKindFormPr
                                     labelId={name}
                                     renderValue={(selected: string) => {
                                         if (selected === '') {
-                                            return <Typography variant="h5">選択してください</Typography>
+                                            return <>色を選択してください</>
                                         }
-                                        return selected
                                     }}
                                 >
-                                    {DUMMY_KINDS.map((kind) => (
-                                        <MenuItem key={kind} value={kind}>
-                                            {kind}
+                                    {DUMMY_COLORS.map((color) => (
+                                        <MenuItem key={color} value={color}>
+                                            {color}
                                         </MenuItem>
                                     ))}
                                 </Select>
@@ -52,4 +50,4 @@ const SelectProductKindForm = ({ name = 'productKind' }: SelectProductKindFormPr
     )
 }
 
-export default SelectProductKindForm
+export default ColorForm
