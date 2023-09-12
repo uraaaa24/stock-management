@@ -1,4 +1,5 @@
 import ProductNameForm from '@/components/organisms/productForms/productNameForm'
+import SelectProductKindForm from '@/components/organisms/productForms/selectProductKindForm'
 import { getDefaultLayout } from '@/components/templates/layout'
 import { NextPageWithLayout } from '@/pages/_app'
 import { Button, Grid, Paper, Typography } from '@mui/material'
@@ -27,6 +28,10 @@ const Create: NextPageWithLayout = () => {
 
                     <Grid item xs={12}>
                         <ProductNameForm name="productName" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <SelectProductKindForm name="productKind" />
                     </Grid>
 
                     <Grid item xs={12}>
