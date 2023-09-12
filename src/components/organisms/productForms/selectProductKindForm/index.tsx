@@ -1,5 +1,6 @@
 import { FormControl, FormHelperText, InputLabel, MenuItem, Select, Typography } from '@mui/material'
 import { Controller, useFormContext } from 'react-hook-form'
+import { DUMMY_KINDS } from '../../../../../dummyData/kinds'
 
 type SelectProductKindFormProps = {
     name?: string
@@ -36,7 +37,11 @@ const SelectProductKindForm = ({ name = 'productKind' }: SelectProductKindFormPr
                                     }}
                                     error={fieldState.invalid}
                                 >
-                                    <MenuItem value="1">ソファー</MenuItem>
+                                    {DUMMY_KINDS.map((kind) => (
+                                        <MenuItem key={kind} value={kind}>
+                                            {kind}
+                                        </MenuItem>
+                                    ))}
                                 </Select>
                                 <FormHelperText>{fieldState.error?.message}</FormHelperText>
                             </FormControl>
