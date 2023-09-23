@@ -1,3 +1,4 @@
+import CampaignForm from '@/components/organisms/productForms/campaignForm'
 import ColorForm from '@/components/organisms/productForms/colorForm'
 import DeliveryDateForm from '@/components/organisms/productForms/deliveryDateForm/idnex'
 import OrderDateForm from '@/components/organisms/productForms/orderDateForm/idnex'
@@ -49,6 +50,10 @@ const Create: NextPageWithLayout = () => {
 
                     <Grid item xs={12}>
                         <PriceForm name="price" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <CampaignForm name="campaign" />
                     </Grid>
 
                     <Grid item xs={12}>
