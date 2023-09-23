@@ -1,4 +1,6 @@
 import ColorForm from '@/components/organisms/productForms/colorForm'
+import DeliveryDateForm from '@/components/organisms/productForms/deliveryDateForm/idnex'
+import OrderDateForm from '@/components/organisms/productForms/orderDateForm/idnex'
 import PriceForm from '@/components/organisms/productForms/priceForm'
 import ProductNameForm from '@/components/organisms/productForms/productNameForm'
 import SelectProductKindForm from '@/components/organisms/productForms/selectProductKindForm'
@@ -21,7 +23,7 @@ const Create: NextPageWithLayout = () => {
                 <Grid
                     container
                     component={'form'}
-                    rowSpacing={4}
+                    rowSpacing={2}
                     onSubmit={methods.handleSubmit(onSubmit)}
                     sx={{ justifyContent: 'space-between', my: 0, mx: 'auto', width: 400 }}
                 >
@@ -47,6 +49,14 @@ const Create: NextPageWithLayout = () => {
 
                     <Grid item xs={12}>
                         <PriceForm name="price" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <OrderDateForm name="orderDate" />
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <DeliveryDateForm name="deliveryDate" />
                     </Grid>
 
                     <Grid item xs={12}>
